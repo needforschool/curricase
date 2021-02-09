@@ -1,0 +1,28 @@
+{
+    "name": "nfactoryschool/curricase",
+    "authors": [
+        {
+            "name": "Antoine Kingue",
+            "email": "contact@antoinek.fr"
+        },
+        {
+            "name": "Oummoul Koulsouwi",
+            "email": "Oummy20180@gmail.com"
+        },
+        {
+            "name": "Jules Giraud",
+            "email": "jules.giraud@outlook.fr"
+        },
+        {
+            "name": "Cyril Bationo",
+            "email": "bationo.c@gmail.com"
+        },
+        {
+            "name": "Clément Blin",
+            "email": "clement.blin76@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/dotenv": "^5.2"
+    }
+}
