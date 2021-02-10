@@ -171,4 +171,11 @@ a:hover {
 }
 
 @media only screen and (max-width: 750px) {
+	#header .navbar .nav-brand p {
+		display: none;
+	}
+
+	#header .navbar .nav {
+		flex: 1;
+	}
 }
