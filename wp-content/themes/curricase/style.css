@@ -39,3 +39,302 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* footer */
+.site {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+  
+.Site-content {
+	flex: 1;
+}
+
+.page-footer {
+	background-color: #0fb9b1;
+	color:#fff;
+	padding-top: 30px;
+	font-size: .90em;
+	font-family: Roboto ,'Helvetica Neue', sans-serif;
+	height: 100%;
+	margin-top: auto
+}
+.wrapfooter {
+    width: 100%;
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0 10px;
+	display: flex;
+}
+.page-footer a {
+	color:#fff;
+}
+.page-footer a:hover {
+	color:#ef4f1d;
+}
+.columns {
+	
+	margin-bottom: 60px;
+	width: 22%;
+}
+.column {
+	
+	margin-left: 25%;
+}
+.column-title {
+	margin-top: 23%;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.column-title-content {
+	margin-bottom: 5%;
+	line-height: 1.33;
+}
+.logo-footer {
+	width: 41%;
+	margin-bottom: 10%;
+}
+#footer-lien {
+	cursor: pointer;
+}
+
+.social-links {
+	text-align: center;
+	margin-top: -10%;
+	margin-right: 20%;
+	FONT-SIZE: 0.85em;
+	display: flex;
+}
+  
+.social-links a i {
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	font-size: 20px;
+	line-height: 40px;
+	border: 1px solid #fff;
+	margin: 40px 5px 0;
+	color: #fff;
+	cursor: pointer;
+	transition: 0.5s;
+}
+  
+.social-links .fa:hover {
+	background: #fff;
+	color: #000;
+	transform: translateY(-7px);
+}
+#social {
+	width: 100%;
+}
+#social {
+    width: 100%;
+}
+#social-title {
+	margin-top: 18%;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+hr{
+	width: 50%;
+	height: 2px;
+	background-color: #fff;
+	border: none; /*on supprime le style par défaut*/
+}
+.mentions-legales {
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 2%;
+	padding-top: 2%;
+}
+.mentions-legales a {
+	text-decoration: none;
+
+}
+/* Responsive footer */
+@media screen and (max-width: 1122px) {
+	.wrapfooter {
+		width: 90%;
+	}
+	.social-links {
+		width: 90%;
+	}
+	
+}
+@media screen and (max-width: 1005px) {
+	.wrapfooter {
+		width: 80%;
+	}
+	.social-links {
+		width: 65%;
+	}
+	
+}
+@media screen and (max-width: 950px) {
+	.wrapfooter {
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+	.columns {
+		width: 30%;
+	}
+	
+}
+@media screen and (max-width: 600px) {
+	.wrapfooter {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.column-title-content {
+		margin-bottom: 5%;
+		line-height: 1.33;
+		width: 210px;
+	}
+	
+}
+	
+	
+
+/* main */
+
+:root {
+	--black: #000;
+	--white: #fff;
+	--orangePrimary: #fa8231;
+	--orangeSecondary: #fd9644;
+	--regular: 400;
+	--semi-bold: 500;
+}
+
+body {
+	background-color: var(--white);
+	color: var(--black);
+}
+
+body {
+	font-size: 16px;
+	font-weight: var(--regular);
+	font-family: 'Roboto', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: var(--black);
+	transition: all .2s;
+	opacity: 1;
+}
+
+a:hover {
+	opacity: .8;
+}
+
+/* container*/
+
+.container {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1400px;
+}
+
+/* btn */
+
+.btn {
+	background-color: var(--black);
+	color: var(--white);
+	padding: 10px 5px;
+	border-radius: 5px;
+	display: inline-block;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1rem;
+	font-weight: var(--semi-bold);
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	opacity: 1;
+	-webkit-transition: all .2s;
+	-o-transition: all .2s;
+	transition: all .2s;
+}
+
+.btn:hover {
+	opacity: .8;
+}
+
+.btn.btn-orangePrimary {
+	background-color: var(--orangePrimary);
+}
+
+/* content */
+
+.content {
+	margin-top: 160px;
+}
+
+/* header */
+
+#header {}
+
+#header .navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: var(--white);
+	border-bottom: solid 1px var(--orangePrimary);
+}
+
+#header .navbar .container {
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 15px;
+}
+
+#header .navbar .nav-brand {
+	display: flex;
+	transition: all .2s;
+	font-size: 20px;
+	font-weight: 500;
+	align-items: center;
+}
+
+#header .navbar .nav-brand span {
+	margin-left: 5px;
+	color: var(--orangePrimary);
+}
+
+#header .navbar .nav-brand:hover {
+	opacity: 1;
+	transform: scale(1.05);
+}
+
+#header .navbar .nav-brand .nav-logo {
+	max-height: 60px;
+	width: auto;
+}
+
+#header .navbar .nav {
+	display: flex;
+	align-items: center;
+}
+
+#header .navbar .nav .nav-item {
+	margin: 0 15px;
+	text-align: center;
+}
+
+@media only screen and (max-width: 750px) {
+	#header .navbar .nav-brand p {
+		display: none;
+	}
+
+	#header .navbar .nav {
+		flex: 1;
+	}
+}
