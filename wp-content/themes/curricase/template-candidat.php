@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Recruteur
+Template Name: Candidat
 */
 get_header(); ?>
 <div class="content">
@@ -12,7 +12,8 @@ get_header(); ?>
     </div>
     <div class="btncv">
         <ul class="boxbtn">
-            
+            <li class="nav-cv"><a href="">Modifier</a></li>
+            <li class="nav-cv"><a href="" >Supprimer</a></li>
             <li class="nav-cv"><a href="" >Export PDF</a></li>
     </div>
 
