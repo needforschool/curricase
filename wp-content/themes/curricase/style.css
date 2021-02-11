@@ -90,6 +90,7 @@ table {
 }
 .column-title-content {
 	margin-bottom: 5%;
+	line-height: 1.33;
 }
 .logo-footer {
 	width: 41%;
@@ -104,6 +105,7 @@ table {
 	margin-top: -10%;
 	margin-right: 20%;
 	FONT-SIZE: 0.85em;
+	display: flex;
 }
   
 .social-links a i {
@@ -173,8 +175,24 @@ hr{
 @media screen and (max-width: 950px) {
 	.wrapfooter {
 		display: flex;
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+	.columns {
+		width: 30%;
+	}
+	
+}
+@media screen and (max-width: 600px) {
+	.wrapfooter {
+		display: flex;
 		flex-direction: column;
 		justify-content: center;
+	}
+	.column-title-content {
+		margin-bottom: 5%;
+		line-height: 1.33;
+		width: 210px;
 	}
 	
 }
