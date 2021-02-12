@@ -3,6 +3,7 @@
 Template Name: Home
 */
 get_header(); ?>
+<<<<<<< HEAD
 
 
 <form action="">
@@ -101,3 +102,7 @@ get_header(); ?>
 </form>
 
 <?php get_footer();
+=======
+<section class="content"></section>
+<?php get_footer();
+>>>>>>> origin/develop
