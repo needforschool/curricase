@@ -100,7 +100,7 @@ header{
 	font-size: .90em;
 	font-family: Roboto ,'Helvetica Neue', sans-serif;
 	height: 100%;
-	margin-top: auto
+	margin-top: 60px;
 }
 .wrapfooter {
     width: 100%;
@@ -315,10 +315,13 @@ hr{
 :root {
 	--black: #000;
 	--white: #fff;
+	--gray: #d1d8e0;
+	--blue: #45aaf2;
 	--orangePrimary: #fa8231;
 	--orangeSecondary: #fd9644;
 	--regular: 400;
 	--semi-bold: 500;
+	--bold: 700;
 }
 
 body {
@@ -326,7 +329,7 @@ body {
 	color: var(--black);
 }
 
-body {
+body, input, button, textarea {
 	font-size: 16px;
 	font-weight: var(--regular);
 	font-family: 'Roboto', sans-serif;
@@ -356,7 +359,7 @@ a:hover {
 .btn {
 	background-color: var(--black);
 	color: var(--white);
-	padding: 10px 5px;
+	padding: 6px 12px;
 	border-radius: 5px;
 	display: inline-block;
 	font-family: 'Roboto', sans-serif;
@@ -387,7 +390,6 @@ a:hover {
 }
 
 /* header */
-
 
 #header .navbar {
 	position: fixed;
@@ -439,12 +441,102 @@ a:hover {
 	text-align: center;
 }
 
+/* register */
+
+#register {}
+
+#register .register-container {
+	display: flex;
+}
+
+#register .register-container .register-content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0 15px;
+}
+
+#register .register-container .register-content h1 {
+	font-size: 25px;
+	font-weight: var(--bold);
+}
+
+#register .register-container .register-content .form-register {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 15px;
+}
+
+#register .register-container .register-content .form-register input[type="text"], #register .register-container .register-content .form-register input[type="password"], #register .register-container .register-content .form-register input[type="email"], #register .register-container .register-content .form-register button, #register .register-container .register-content .form-register .input-row, #register .register-container .register-content .form-register .accept-tos {
+	max-width: 80%;
+	width: 100%;
+	margin-top: 10px;
+}
+
+#register .register-container .register-content .form-register input[type="text"], #register .register-container .register-content .form-register input[type="password"], #register .register-container .register-content .form-register input[type="email"] {
+	background-color: var(--gray);
+	outline: none;
+	border: none;
+	padding: 8px;
+	border-radius: 5px;
+}
+
+#register .register-container .register-content .form-register .input-row {
+	display: flex;
+	justify-content: space-around;
+}
+
+#register .register-container .register-content .form-register .role-container {
+	display: flex;
+}
+
+#register .register-container .register-content .form-register .role-container input {
+	margin: 0;
+}
+
+#register .register-container .register-content .form-register .role-container p {
+	margin-left: 3px;
+}
+
+#register .register-container .register-content .form-register .accept-tos {
+	display: flex;
+}
+
+#register .register-container .register-content .form-register .accept-tos input {
+	margin: 0;
+}
+
+#register .register-container .register-content .form-register .accept-tos p {
+	margin-left: 5px;
+	font-size: 13px;
+}
+
+#register .register-container .register-content .already-registred {
+	display: flex;
+	flex-direction: column;
+	font-size: 20px;
+	align-items: center;
+}
+
+#register .register-container .register-content .already-registred a {
+	margin-top: 15px;
+	color: var(--blue);
+}
+
 @media only screen and (max-width: 750px) {
 	#header .navbar .nav-brand p {
 		display: none;
 	}
-
-	#header .navbar .nav {
-		flex: 1;
+	#header .navbar .nav .nav-item .btn {
+		display: none;
+	}
+	#register .register-container {
+		flex-direction: column;
+	}
+	#register .register-container .register-content.registred {
+		margin: 30px 0;
 	}
 }
