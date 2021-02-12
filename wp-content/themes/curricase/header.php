@@ -25,7 +25,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body class="site" <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 	<header id="header">
 		<div class="container">
@@ -39,7 +39,6 @@
 					<li class="nav-item"><a href="" class="nav-link btn btn-orangePrimary">Commencer à créer</a></li>
 					<li class="nav-item"><a href="" class="nav-link">Se connecter</a></li>
 				</ul>
-			</nav>
-		</div>
-	</header>
+			</div>
+		</nav>
 	</header>
