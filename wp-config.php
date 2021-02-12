@@ -96,7 +96,7 @@ $table_prefix = 'cc_';
  *
  * @link https://fr.wordpress.org/support/article/debugging-in-wordpress/
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
 
 
 define('WP_HOME', $_ENV['WP_HOME']);
