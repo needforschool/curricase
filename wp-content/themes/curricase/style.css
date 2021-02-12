@@ -40,7 +40,6 @@ table {
 	border-spacing: 0;
 }
 
-<<<<<<< HEAD
 /* perso */
 header{
 	position: relative;
@@ -81,7 +80,8 @@ header{
 .submit{
 	text-align: center;
 }
-=======
+
+
 /* footer */
 .site {
 	display: flex;
@@ -319,7 +319,6 @@ a:hover {
 
 /* header */
 
-#header {}
 
 #header .navbar {
 	position: fixed;
@@ -380,4 +379,3 @@ a:hover {
 		flex: 1;
 	}
 }
->>>>>>> origin/develop

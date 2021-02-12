@@ -25,20 +25,6 @@
 	<?php wp_head(); ?>
 </head>
 
-<<<<<<< HEAD
-<body <?php body_class(); ?>>
-	<?php wp_body_open(); ?>
-	<div id="page" class="site">
-
-		<header id="masthead" class="site-header">
-
-			<div class="logo"></div>
-
-			<img class="profileImg" src="https://meetanentrepreneur.lu/wp-content/uploads/2019/08/profil-linkedin.jpg" alt="photo de profile">
-
-			<div class="bar"></div>
-		</header><!-- #masthead -->
-=======
 <body class="site" <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 	<header id="header">
@@ -52,4 +38,3 @@
 			</div>
 		</nav>
 	</header>
->>>>>>> origin/develop

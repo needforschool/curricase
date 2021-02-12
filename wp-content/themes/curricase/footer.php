@@ -44,12 +44,6 @@
 			</div>
 		</div>
 
-<<<<<<< HEAD
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-=======
 		<div class="columns">
 			<div id="social" class="column">
 				<h3 id="social-title">Suivez nous</h3>
@@ -69,7 +63,6 @@
 
 
 </footer><!-- #colophon -->
->>>>>>> origin/develop
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
