@@ -28,13 +28,9 @@
 <body class="site" <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 	<header id="header">
-		<div class="container">
-			<nav class="navbar">
-				<a href="" class="nav-brand">
-					<img src="<?= get_template_directory_uri() ?>/assets/img/logo/logo-square-bg-none.png" alt="Curicase Logo" class="nav-logo">
-					<p><span>Curri</span>case</p>
-					<p><span>Curri</span>case</p>
-				</a>
+		<nav class="navbar">
+			<div class="container">
+				<a href="<?php echo get_site_url('home') ?>" class="nav-brand"><img src="<?= get_template_directory_uri() ?>/assets/img/logo/logo-square-bg-none.png" alt="Curicase Logo" class="nav-logo"><span>Curry</span>case</a>
 				<ul class="nav">
 					<li class="nav-item"><a href="" class="nav-link btn btn-orangePrimary">Commencer à créer</a></li>
 					<li class="nav-item"><a href="" class="nav-link">Se connecter</a></li>

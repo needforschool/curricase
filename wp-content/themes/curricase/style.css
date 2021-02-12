@@ -100,7 +100,7 @@ header{
 	font-size: .90em;
 	font-family: Roboto ,'Helvetica Neue', sans-serif;
 	height: 100%;
-	margin-top: auto
+	margin-top: 60px;
 }
 .wrapfooter {
     width: 100%;
@@ -391,19 +391,16 @@ a:hover {
 
 /* header */
 
-
 #header .navbar {
 	position: fixed;
-	border-bottom: solid 1px var(--orangePrimary);
 	top: 0;
 	left: 0;
 	width: 100%;
 	background-color: var(--white);
+	border-bottom: solid 1px var(--orangePrimary);
 }
 
-#header .navbar {}
-
-#header .navbar {
+#header .navbar .container {
 	height: 80px;
 	display: flex;
 	align-items: center;
@@ -442,14 +439,6 @@ a:hover {
 #header .navbar .nav .nav-item {
 	margin: 0 15px;
 	text-align: center;
-}
-
-#header .navbar .nav .nav-item:first-child {
-	margin-left: 0;
-}
-
-#header .navbar .nav .nav-item:last-child {
-	margin-right: 0;
 }
 
 /* register */
