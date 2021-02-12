@@ -16,7 +16,6 @@ if (!empty($_POST['submit'])) {
     $password = checkXss($_POST['password']);
     $passwordConfirm = checkXss($_POST['password-confirm']);
     $role = checkXss($_POST['role']);
-    $tos = checkXss($_POST['tos']);
 
     $errors = checkField($errors, $firstname, 'firstname', 2, 80);
     $errors = checkField($errors, $lastname, 'lastname', 2, 80);
