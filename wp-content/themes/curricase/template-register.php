@@ -3,21 +3,6 @@
 Template Name: Register
 */
 
-/*
-$userdata = array (
-        'user_login'    =>  $username,
-        'user_email'    =>  $email,
-        'user_pass'     =>  $password,
-        'user_url'      =>  $website,
-        'first_name'    =>  $first_name,
-        'last_name'     =>  $last_name,
-        'nickname'      =>  $nickname,
-        'description'   =>  $bio,
-    ) ;
-
-    $id = wp_insert_user( $WP_array ) ;
-
-    wp_update_user( array ('ID' => $id, 'role' => 'editor') ) ;*/
 
 get_header();
 ?>
@@ -78,22 +63,12 @@ if ($_POST['submit']) {
 
     if ($password != $passwordConfirm) $errors['password-confirm'] == 'Les mots de passes ne sont pas identiques';
     if (count($errors) == 0) {
-        $userdata = array(
-            'user_login'    =>  $username,
-            'user_email'    =>  $email,
-            'user_pass'     =>  $password,
-            'first_name'    =>  $firstname,
-            'last_name'     =>  $lastname,
-            'nickname'      =>  $firstname,
-        );
-
-        $user_id = wp_insert_user($userdata);
-
-        print_r($user_id) ;
-
-        wp_update_user(array('ID' => $user_id, 'role' => 'editor'));
-
-        if (is_wp_error($user_id)) echo $user_id->get_error_message();
+        $username = strtolower($firstname . $lastname);
+        $user_login = wp_slash($username);
+        $user_email = wp_slash($email);
+        $user_pass  = $password;
+        $userdata = compact('user_login', 'user_email', 'user_pass');
+        wp_insert_user($userdata);
     }
 
     print_r($errors);
