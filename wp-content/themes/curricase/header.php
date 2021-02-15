@@ -30,7 +30,7 @@
 	<header id="header">
 		<nav class="navbar">
 			<div class="container">
-				<a href="" class="nav-brand"><img src="<?= get_template_directory_uri() ?>/assets/img/logo/logo-square-bg-none.png" alt="Curicase Logo" class="nav-logo"><span>Curry</span>case</a>
+				<a href="" class="nav-brand"><img src="<?= get_template_directory_uri() ?>/assets/img/logo/logo-square-bg-none.png" alt="Curicase Logo" class="nav-logo"><span>Curri</span>case</a>
 				<ul class="nav">
 					<li class="nav-item"><a href="" class="nav-link btn btn-orangePrimary">Commencer à créer</a></li>
 					<li class="nav-item"><a href="" class="nav-link">Se connecter</a></li>
