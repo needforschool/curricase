@@ -16,7 +16,7 @@
 	<div class="wrapfooter">
 		<div class="columns">
 			<div class="column">
-				<img class="logo-footer" src="./wp-content/themes/curricase/assets/img/logo/logo-square-bg-none.png" alt="">
+				<img class="logo-footer" src="<?php echo get_template_directory_uri() . '/assets/img/logo/logo-square-bg-none.png' ?>" alt="">
 				<p class="column-title-content">L'outil pour créer des CVs que les recruteurs adoreront. Communiquez, démarquez vous et captivez plus que jamais. Le moment est venu de donner vie a vos expériences</p>
 			</div>
 		</div>
@@ -33,7 +33,7 @@
 			<div class="column">
 				<h3 class="column-title">Notre société</h3>
 				<p class="column-title-content"><a id="footer-lien">Qui sommes nous ?</a></p>
-				
+
 			</div>
 		</div>
 
@@ -54,11 +54,11 @@
 				</div>
 			</div>
 		</div>
-		
+
 	</div>
 	<hr>
 	<p class="mentions-legales"><a href="">Mentions Légales</a></p>
-	
+
 
 
 

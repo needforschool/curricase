@@ -3,7 +3,6 @@
 Template Name: Home
 */
 get_header(); ?>
-
 <section id="first">
         <div class="first-wrapper container">
             <div class="first-text">
