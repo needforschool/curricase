@@ -140,6 +140,7 @@ function curricase_scripts()
     wp_style_add_data('curricase-style', 'rtl', 'replace');
 
     wp_enqueue_script('curricase-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
+    wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/main.js', array(), '1.0.2', true);
     
 
     if (is_singular() && comments_open() && get_option('thread_comments')) {
