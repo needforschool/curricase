@@ -69,18 +69,231 @@ header{
 	right: 2%;
 	top: 0;
 }
+/* page creat cv */
 
 .section{
 	background-color: #0fb9b1;
 	margin: 20px auto;
-	width: 60%;
+	width: 70%;
 	border-radius: 15px;
+	padding: 2%;
+	box-shadow: 0 15px 35px rgb(50 50 93 / 10%), 0 5px 15px rgb(0 0 0 / 7%);
+}
+.content-form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.title {
+	padding-bottom: 2%;
+	font-size: 2em;
+}
+.content-formbox1 {
+	width: 30%;
+}
+.boxphoto {
+	float: left;
+    margin: 3px 0 0 0;
+    padding: 10px;
+    height: 152px;
+    width: 152px;
+    text-align: center;
+    background: #f5f5f5;
+    border-radius: 3px;
+    border: 2px dotted #dddbdb;
+    background-size: cover !important;
+    transition: all 200ms ease-in-out;
+    box-shadow: 0px 0px 3px 0px #d3cfcf;
+}
+.boxphoto2 {
+    padding-top: 29px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
 }
 
-.submit{
+.content-formbox2 {
+	width: 70%;
+}
+.minibox {
+	display: flex;
+	justify-content: space-between;
+	padding: 2%;
+}
+.minibox2 {
+	display: flex;
+	justify-content: center;
+	margin: 2%;
+}
+.minibox2 input {
+	width: 60%;
+    background-color: #fff;
+    border: 2px solid #eaeaea;
+    border-radius: 10px;
+    padding: 0 14px 1px;
+    height: 48px;
+    font-size: 16px;
+}
+.input2 {
+	width: 40%;
+    background-color: #fff;
+    border: 2px solid #eaeaea;
+    border-radius: 10px;
+    padding: 0 14px 1px;
+    height: 48px;
+    font-size: 1em;
+}
+
+.submit {
+	display: flex;
+	justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: #fff;
+}
+#btn-submit {
+	color: #fff;
+    padding: 10px 40px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    opacity: 1;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+	background-color: #ff6e14;
+}
+/* responsive cv crea */
+@media screen and (max-width: 950px) {
+	.section {
+		width: 90%;
+	}
+}
+@media screen and (max-width: 650px) {
+	.title {
+		text-align: center;
+	}
+	.content-form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.boxphoto {
+		margin-bottom: 15%;
+	}
+	.input2 {
+		width: 35%;
+	}
+}
+@media screen and (max-width: 500px) {
+	.section {
+		width: 90%;
+	}
+	.form {
+		display: flex;
+		justify-content: center;
+	}
+	.content-formbox1 {
+		DISPLAY: flex;
+		JUSTIFY-CONTENT: center;
+	}
+	.content-formbox2 {
+		width: 100%;
+	}
+	
+}
+/*page creat cv2   */
+.content-form {
+	display: flex;
+}
+    
+.box-form {
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	margin-left: 5%;
+}
+.title2 {
+	padding-bottom: 2%;
+    font-size: 2em;
+}
+.input3 {
+	width: 100%;
+    background-color: #fff;
+    border: 2px solid #eaeaea;
+    border-radius: 10px;
+    padding: 0 14px 1px;
+    height: 48px;
+    font-size: 1em;
+	margin-bottom: 5%;
+}
+#description {
+	height: 130px;
+	padding: 10px 14px 1px;
+}
+.content-form3 {
+    display: flex;
+    justify-content: center;
+}
+.box-date {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.input3 {
+	width: 80%;
+    background-color: #fff;
+    border: 2px solid #eaeaea;
+    border-radius: 10px;
+    padding: 0 14px 1px;
+    height: 48px;
+    font-size: 1em;
+}
+#title-date  {
+	margin-bottom: 5%;
+}
+#box-description {
+	width: 100%;
+	background-color: #fff;
+    border: 2px solid #eaeaea;
+    border-radius: 10px;
+    padding: 0 14px 1px;
+    height: 130px;
+    font-size: 1em;
+	padding: 10px 14px 1px;
+}
+.ajout {
 	text-align: center;
+	margin-top: 5%;
+}
+.title-ajout {
+	margin-left: 2%;
 }
 
+
+
+				
+
+/* Responsive creatcv2 */
+@media screen and (max-width: 500px) {
+	.title2 {
+		text-align: center;
+		margin-bottom: 2%;
+	}
+	#minibox-date {
+		display: flex;
+		justify-content: center;
+	}
+	#description {
+		width: 70%;
+		margin-bottom: 5%;
+	}
+	.input3 {
+		width: 50%;
+	}
+
+}
 
 /* footer */
 .site {
@@ -222,6 +435,7 @@ hr{
 	}
 	.columns {
 		width: 30%;
+		margin-right: 3%;
 	}
 	
 }
@@ -238,6 +452,7 @@ hr{
 	}
 	
 }
+
 /* template-candidat */
 .content {
 	font-family: 'Roboto', sans-serif;
@@ -448,3 +663,4 @@ a:hover {
 		flex: 1;
 	}
 }
+
