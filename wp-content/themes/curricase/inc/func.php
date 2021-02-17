@@ -48,3 +48,10 @@ function checkEmail($errors, $data, $key)
     if (!filter_var($data, FILTER_VALIDATE_EMAIL)) $errors[$key] = 'Cette adresse mail est invalide';
     return $errors;
 }
+
+
+function debug($table){
+    echo '<pre>';
+    print_r($table);
+    echo '</pre>';
+  }

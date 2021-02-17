@@ -1,10 +1,7 @@
 <?php
 /*
-Template Name: Dashboard Recruteur
+Template Name: Candidates
 */
-
-
-$cvs = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}cv");
 
 ?>
 
@@ -17,7 +14,7 @@ $cvs = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}cv");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri() ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <title>Dashboard Recruteur</title>
+    <title>Dashboard candidats</title>
 </head>
 
 <body>
@@ -29,23 +26,19 @@ $cvs = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}cv");
             <img src="<?php echo get_template_directory_uri() ?>/assets/img/recruteur.jpg" alt="" class="recruteur">
         </div>
     </div>
-    <div class="flex-recruter">
+    <div class="flex-recruter candidates">
         <div class="banner">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/img/logo/logo-square-bg-none.png" alt="logo image">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/img/logo/logo-square-bg-none.png" alt="logo image" class="logo-candidates">
+            <div class="creations">
+                <h1>Mes Créations</h1>
+                <a href="#" class="btn btn-new">New +</a>
+            </div>
         </div>
         <div class="container-img">
-            <?php foreach ($cvs as $cv) {
-                ?>
-                <a href="http://localhost/WordPress/projet/nfactory-curricase/view_cv_recruteur/?id=<?php echo $cv->id; ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/img/modele<?php echo $cv->theme_id ; ?>.jpg" alt="modèle cv" class="modele"></a>
-                <p class="jbname"> <?php echo $cv->profil_jobname; ?> </p>
-
-                <?php
-            } ?>
-            
+            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/modele1.jpg" alt="modèle cv" class="modele"></a>
+            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/modele2.jpg" alt="modèle cv" class="modele modele2"></a>
         </div>
     </div>
-
-
 
 </body>
 

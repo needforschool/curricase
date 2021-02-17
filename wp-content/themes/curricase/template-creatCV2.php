@@ -126,6 +126,7 @@ if (!empty($_POST['submitted'])) {
 
                     <div class="box-form">
                         <label for="description"></label>
+<<<<<<< HEAD
                         <textarea class="input3" name="description" id="description" placeholder="Description" value="<?php if (!empty($_POST['description'])) {
                                                                                                                             echo $_POST['description'];
                                                                                                                         } ?>"></textarea>
@@ -140,6 +141,12 @@ if (!empty($_POST['submitted'])) {
                         <p class="error"><?php if (!empty($errors['titre'])) {
                                                 echo $errors['titre'];
                                             } ?></p>
+=======
+                        <textarea class="input3" name="description" id="description" placeholder="Description" ></textarea>
+
+                        <label for="titre"></label>
+                        <input class="input3" type="text" name="titre" id="titre" placeholder="Titre" >
+>>>>>>> 2a0a23830fc11aa08bd2891158d92c14490f9ec5
                     </div>
                 </div>
             </div>
@@ -147,13 +154,18 @@ if (!empty($_POST['submitted'])) {
 
 
 
+<<<<<<< HEAD
         <div class="section">
+=======
+        <div class="section" id="add-experience">
+>>>>>>> 2a0a23830fc11aa08bd2891158d92c14490f9ec5
             <h2 class="title">Expériences professionnelles</h2>
             <div class="content-form3">
                 <div class="content-formbox2">
 
                     <div class="minibox">
                         <label for="fonction"></label>
+<<<<<<< HEAD
                         <input class="input2" class="input" type="text" name="fonction" id="fonction" placeholder="Fonction" value="<?php if (!empty($_POST['fonction'])) {
                                                                                                                                         echo $_POST['fonction'];
                                                                                                                                     } ?>">
@@ -178,11 +190,23 @@ if (!empty($_POST['submitted'])) {
                         <p class="error"><?php if (!empty($errors['employeur'])) {
                                                 echo $errors['employeur'];
                                             } ?></p>
+=======
+                        <input class="input2" class="input" type="text" name="fonction" id="fonction" placeholder="Fonction" >
+
+                        <label for="localité"></label>
+                        <input class="input2" type="text" name="localité" id="localité" placeholder="Localité" >
+                    </div>
+
+                    <div class="minibox2">
+                        <label for="employeur"></label>
+                        <input type="text" name="employeur" id="employeur" placeholder="Employeur" >
+>>>>>>> 2a0a23830fc11aa08bd2891158d92c14490f9ec5
                     </div>
 
                     <div class="minibox" id="minibox-date">
                         <div class="box-date">
                             <label id="title-date" for="title-date">Depuis</label>
+<<<<<<< HEAD
                             <input class="input3" type="date" name="depuis" id="depuis" value="<?php if (!empty($_POST['depuis'])) {
                                                                                                     echo $_POST['depuis'];
                                                                                                 } ?>">
@@ -219,10 +243,33 @@ if (!empty($_POST['submitted'])) {
                     </div>
                     <div class="ajout">
                         <h3><i class="fas fa-plus-square"></i><a class="title-ajout" href="">Ajouter expériences professionnelles</a></h3>
+=======
+                            <input class="input3" type="date" name="depuis" id="birth" >
+
+                        </div>
+
+
+                        <div class="box-date">
+                            <label id="title-date" for="title-date">Jusqu'à</label>
+                            <input class="input3" type="date" name="jusqua" id="jusqua" >
+
+                        </div>
+                    </div>
+
+                    <div class="minibox">
+                        <label for="description"></label>
+                        <textarea class="input2" type="text" name="description" id="box-description" placeholder="Description" ></textarea>
+
+
+                    </div>
+                    <div class="ajout">
+                        <h3><i class="fas fa-plus-square"></i><a class="title-ajout" href="" id="add">Ajouter expériences professionnelles</a></h3>
+>>>>>>> 2a0a23830fc11aa08bd2891158d92c14490f9ec5
                     </div>
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
 
 
 
@@ -283,6 +330,35 @@ if (!empty($_POST['submitted'])) {
 
                         </div>
                     </div>
+=======
+
+
+
+        <div class="section" id="add-formation">
+            <h2 class="title">Formation</h2>
+            <div class="content-form3">
+                <div class="content-formbox2">
+
+                    <div class="minibox">
+                        <label for="formation"></label>
+                        <input class="input2" class="input" type="text" name="formation" id="formation" placeholder="Formation" >
+
+                        <label for="localité"></label>
+                        <input class="input2" type="text" name="localité" id="localité" placeholder="Localité" >
+                    </div>
+
+                    <div class="minibox2">
+                        <label for="etablissement"></label>
+                        <input type="text" name="etablissement" id="etablissement" placeholder="Etablissement" >
+                    </div>
+
+                    <div class="minibox" id="minibox-date">
+                        <div class="box-date">
+                            <label id="title-date" for="title-date">Depuis</label>
+                            <input class="input3" type="date" name="depuis" id="birth" >
+
+                        </div>
+>>>>>>> 2a0a23830fc11aa08bd2891158d92c14490f9ec5
 
                     <div class="minibox">
                         <label for="description"></label>
@@ -293,10 +369,28 @@ if (!empty($_POST['submitted'])) {
                                                 echo $errors['description3'];
                                             } ?></p>
 
+<<<<<<< HEAD
 
                     </div>
                     <div class="ajout">
                         <h3><i class="fas fa-plus-square"></i><a class="title-ajout" href="">Ajouter formation</a></h3>
+=======
+                        <div class="box-date">
+                            <label id="title-date" for="title-date">Jusqu'à</label>
+                            <input class="input3" type="date" name="jusqua" id="jusqua" >
+
+                        </div>
+                    </div>
+
+                    <div class="minibox">
+                        <label for="description"></label>
+                        <textarea class="input2" type="text" name="description" id="box-description" placeholder="Description" ></textarea>
+
+
+                    </div>
+                    <div class="ajout">
+                        <h3><i class="fas fa-plus-square"></i><a class="title-ajout" href="" id="addf">Ajouter formation</a></h3>
+>>>>>>> 2a0a23830fc11aa08bd2891158d92c14490f9ec5
                     </div>
                 </div>
             </div>
@@ -305,13 +399,18 @@ if (!empty($_POST['submitted'])) {
 
 
 
+<<<<<<< HEAD
         <div class="section">
+=======
+        <div class="section" id="add-competence">
+>>>>>>> 2a0a23830fc11aa08bd2891158d92c14490f9ec5
             <h2 class="title">Compétences</h2>
             <div class="content-form3">
                 <div class="content-formbox2">
 
                     <div class="minibox">
                         <label for="competence"></label>
+<<<<<<< HEAD
                         <input class="input2" class="input" type="text" name="competence" id="competence" placeholder="Compétence" value="<?php if (!empty($_POST['competence'])) {
                                                                                                                                                 echo $_POST['competence'];
                                                                                                                                             } ?>"></textarea>
@@ -330,6 +429,15 @@ if (!empty($_POST['submitted'])) {
                     </div>
                     <div class="ajout">
                         <h3><i class="fas fa-plus-square"></i><a class="title-ajout" href="">Ajouter compétences</a></h3>
+=======
+                        <input class="input2" class="input" type="text" name="competence" id="competence" placeholder="Compétence" >
+
+                        <label for="niveau"></label>
+                        <input class="input2" type="text" name="niveau" id="niveau" placeholder="Niveau" >
+                    </div>
+                    <div class="ajout">
+                        <h3><i class="fas fa-plus-square"></i><a class="title-ajout" href="" id="addc">Ajouter compétences</a></h3>
+>>>>>>> 2a0a23830fc11aa08bd2891158d92c14490f9ec5
                     </div>
                 </div>
             </div>
