@@ -39,15 +39,17 @@ if (!empty($_POST['submit'])) {
         wp_insert_user($userdata);
 
         $creds = [
-            'user_login'    => $username,
-            'user_password' => $password,
+            'user_login'    => $user_login,
+            'user_password' => $user_pass,
             'remember'      => true
         ];
 
-        $user = wp_signon($creds, is_ssl());
+        $user = wp_signon($creds, false);
 
         if (is_wp_error($user)) {
             echo $user->get_error_message();
+        } else {
+            wp_redirect( home_url() );
         }
     }
 }
@@ -86,7 +88,7 @@ get_header();
             <div class="register-content registred">
                 <div class="already-registred">
                     <p>Vous avez déjà un compte?</p>
-                    <a href="../login">Se connecter</a>
+                    <a href="<?php echo esc_url(home_url('login')); ?>">Se connecter</a>
                 </div>
             </div>
         </div>
