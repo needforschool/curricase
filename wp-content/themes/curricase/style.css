@@ -342,6 +342,162 @@ header {
 	}
 }
 
+/*page creat cv3   */
+
+#creatcv3 {
+    font-family: Roboto;
+    margin: 0px 100px;
+    font-size: initial;
+
+}
+#creatcv3 .title {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+}
+#creatcv3 .title h1 {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 59px;
+}
+#creatcv3 .title .progress {
+    flex-direction: row;
+    background: #1FB569;
+    height: 2px;
+    width: 300px;   
+    margin: 20px auto;
+
+}
+#creatcv3 .title .progress a img {
+    flex-direction: row;
+	margin-top: -15px;
+	margin-bottom: 20px;
+    margin-left: 20px;
+    
+    background: #1FB569;
+    border-radius: 50%;
+    
+}
+#creatcv3 .title .progress a img:hover {
+    opacity: 0.8;
+    margin-left: 25px;
+    margin-right: 5px;
+    margin-top: -15px;
+    border-radius: 30%;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+#creatcv3 .title .progress .step1{
+    margin-right: 0px;
+	margin-bottom: 20px;
+}
+#creatcv3 .title .progress .step1:hover{
+    margin-right: 5px;
+    margin-left: 20px;
+}
+#creatcv3 .title .progress .step3:hover{
+    /* margin-left: 35px; */
+    margin-right: 0px;
+}
+#creatcv3 .template form ul {
+    display: flex;
+    flex-direction: row;
+
+}
+#creatcv3 .template form ul li {
+    margin: 30px auto;
+    opacity: 0.7;
+   
+    
+}
+
+#creatcv3 .template form ul li:hover {
+    opacity: 1;
+    border-radius: 40px;
+    border: 3px solid rgba(0, 0, 0, 0.5);
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    
+}
+#creatcv3 .template form ul li input {
+    position: absolute;
+}
+#creatcv3 .template form ul li label:active{
+    opacity: 1;
+}
+#creatcv3 .template form ul li label img:hover{
+    border-radius: 40px; /* attention border radius au li aussi */
+    
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+
+}
+#creatcv3 .template form ul li label img:active{
+    opacity: 1;
+}
+#creatcv3 .final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+}
+#creatcv3 .final button {
+    color: #fff;
+    width: 250px;
+    padding: 15px 80px 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    border: none;
+    opacity: 1;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+	background-color: #ff6e14;
+    outline: none;
+}
+#creatcv3 .final button:hover{
+    width: 280px;
+    padding: 20px 85px 15px;
+    -webkit-box-shadow: 0px 18px 10px 0px rgba(250,130,49,0.5);
+-moz-box-shadow: 0px 18px 10px 0px rgba(250,130,49,0.5);
+box-shadow: 0px 18px 10px 0px rgba(250,130,49,0.5);
+    margin-bottom: 20px;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    
+}
+#creatcv3 .final a {
+    color: #45AAF2;
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin-top: 5px;
+
+}
+/* Responsive creatcv3 */
+
+@media only screen and (max-width: 1100px) {
+
+    #creatcv3 .template form ul {
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+}
+@media only screen and (max-width: 800px) {
+    #creatcv3 {
+        margin: 20px;
+    }
+}
 
 /* footer */
 
