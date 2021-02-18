@@ -42,7 +42,7 @@ $cvs = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}cv");
 
             <?php foreach ($cvs as $cv) {
                 ?>
-                <a href="<?php echo esc_url(home_url('view_cv_recruteur')) ?>/?id=<?php echo $cv->id; ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/img/modele<?php echo $cv->theme_id ; ?>.jpg" alt="modèle cv" class="modele"></a>
+                <a href="<?php echo esc_url(home_url('view_cv_recruteur')) ?>/?id=<?php echo $cv->id; ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/img/modele1.jpg" alt="modèle cv" class="modele"></a>
                 <p class="jbname"> <?php echo $cv->profil_jobname; ?> </p>
 
                 <?php

@@ -32,6 +32,7 @@
 		<div class="columns">
 			<div class="column">
 				<h3 class="column-title">Notre société</h3>
+
 				<p class="column-title-content"><a id="footer-lien" href="<?php echo esc_url(home_url('about-us')); ?>">Qui sommes nous ?</a></p>
 
 			</div>
@@ -57,7 +58,7 @@
 
 	</div>
 	<hr>
-	<p class="mentions-legales"><a href="">Mentions Légales</a></p>
+	<p class="mentions-legales"><a href="<?php echo esc_url(home_url('politique-de-confidentialite')); ?>">Mentions Légales</a></p>
 
 
 
