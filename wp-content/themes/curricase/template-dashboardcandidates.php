@@ -22,16 +22,16 @@ Template Name: Candidates
         <div class="cont-input">
             <i class="fas fa-search"></i>
             <input type="search" placeholder="chercher des créations" class="search" id="recherche">
-            <p class="welcome">Bienvenue Nom prenom</p>
+            <p class="welcome">Bienvenue <?php echo (is_user_logged_in()) ? wp_get_current_user()->user_login : 'Se connecter'; ?></p>
             <img src="<?php echo get_template_directory_uri() ?>/assets/img/recruteur.jpg" alt="" class="recruteur">
         </div>
     </div>
     <div class="flex-recruter candidates">
         <div class="banner">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/img/logo/logo-square-bg-none.png" alt="logo image" class="logo-candidates">
+            <a href="<?php echo esc_url(home_url()); ?>" title="Aller à la page d'acceuil"><img src="<?php echo get_template_directory_uri() ?>/assets/img/logo/logo-square-bg-none.png" alt="logo image" class="logo-candidates"></a>
             <div class="creations">
                 <h1>Mes Créations</h1>
-                <a href="#" class="btn btn-new">New +</a>
+                <a href="<?php echo esc_url(home_url('creatcv1')); ?>" class="btn btn-new">New +</a>
             </div>
         </div>
         <div class="container-img">
