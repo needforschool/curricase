@@ -151,3 +151,36 @@ function curricase_scripts()
     }
 }
 add_action('wp_enqueue_scripts', 'curricase_scripts');
+
+// FUNCTION FORM 
+
+function cleanXss($value)
+{
+  return trim(strip_tags($value));
+}
+
+function ValidationText($errors,$data,$key,$min,$max)
+{
+  if(!empty($data)) {
+    if(mb_strlen($data) < $min) {
+      $errors[$key] = 'Min '.$min.' caractères';
+    } elseif(mb_strlen($data) > $max) {
+      $errors[$key] = 'Max '.$max.' caractères';
+    }
+  } else {
+    $errors[$key] = 'Veuillez renseigner ce champ';
+  }
+  return $errors;
+}
+
+function emailValidation($err,$mail,$key)
+{
+    if(!empty($mail)) {
+        if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+            $err[$key] = 'Email non valide';
+        }
+    } else {
+        $err[$key] = 'Veuillez renseigner ce champ';
+    }
+    return $err;
+}
