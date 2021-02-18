@@ -289,7 +289,7 @@ header {
 }
 
 .input3 {
-	width: 80%;
+	width: 85%;
 	background-color: #fff;
 	border: 2px solid #eaeaea;
 	border-radius: 10px;
@@ -792,7 +792,7 @@ a:hover {
 
 .container {
 	margin: 0 auto;
-	width: 100%;
+	
 	max-width: 1400px;
 	padding: 0 15px;
 }
@@ -1317,6 +1317,9 @@ a:hover {
 	position: absolute;
 	top: 20px;
 	left: 50px;
+}
+.container-img {
+	display: flex;
 }
 
 .flex-recruter .container-img {

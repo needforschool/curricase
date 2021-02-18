@@ -4,8 +4,8 @@ Template Name: Dashboard Candidates
 */
 
 $userID = get_current_user_id();
-$last_name = get_user_meta( $userID, 'last_name', true );
-$first_name = get_user_meta( $userID, 'first_name', true );
+$last_name = get_user_meta($userID, 'last_name', true);
+$first_name = get_user_meta($userID, 'first_name', true);
 
 $cvs = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}cv WHERE user_id=$userID");
 
@@ -46,13 +46,18 @@ $cvs = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}cv WHERE user_id=$userID
             </div>
         </div>
         <div class="container-img">
-        <?php foreach ($cvs as $cv) {
+            <div class="box-container-img">
+                <?php foreach ($cvs as $cv) {
                 ?>
-                <a href="<?php echo esc_url(home_url('view-cv-candidat')) ?>/?id=<?php echo $cv->id; ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/img/modele1.jpg" alt="modèle cv" class="modele"></a>
-                <p class="jbname"> <?php echo $cv->profil_jobname; ?> </p>
+                    <a href="<?php echo esc_url(home_url('view-cv-candidat')) ?>/?id=<?php echo $cv->id; ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/img/modele1.jpg" alt="modèle cv" class="modele"></a>
+                    <p class="jbname"> <?php echo $cv->profil_jobname; ?> </p>
 
                 <?php
-            } ?>
+                } ?>
+            </div>
+
+
+
         </div>
     </div>
 
