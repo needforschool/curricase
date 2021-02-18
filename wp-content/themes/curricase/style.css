@@ -1193,6 +1193,7 @@ a:hover {
 	#third .third-wrapper h1.third-title {
 		font-size: 2rem;
 	}
+	
 }
 
 @media only screen and (max-width: 750px) {
@@ -1242,6 +1243,7 @@ a:hover {
 		width: 100%;
 		max-width: 100%;
 	}
+	
 }
 
 /******************************* Dashboard recruteur ***************************************************/
@@ -1610,6 +1612,9 @@ a:hover {
 	color: var(--orangePrimary);
 	font-size: 1.1rem;
 	margin: 5px 0;
+ }
+ #team .card p a {
+	 color: var(--orangePrimary);
  }
  #team .card h2 {
 	margin-top: 15px;

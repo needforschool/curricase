@@ -7,7 +7,7 @@ get_header(); ?>
 <section id="first">
     <div class="first-wrapper container">
         <div class="first-text">
-            <p class="first-text-desc">Beaucoup plus qu'un outil</p>
+            <p class="first-text-desc">Beaucoup plus qu'un CV</p>
             <h1 class="first-text-title">Bonjour ! Nous sommes Curricase</h1>
 
             <h2 class="second-text-title">Vous voulez mieux nous connaître ? Continuez à lire</h2>
@@ -26,8 +26,8 @@ get_header(); ?>
         <div class="second-text">
             <h1 class="second-text-title">Nous avons une mission</h1>
             <div class="apart">
-                <p class="second-text-desc">Notre principal objectif est que n’importe quelle personne puisse créer des contenus spectaculaires, interactifs et animés. Nous voulons aider à améliorer la façon de présenter, communiquer, diffuser et enseigner.</p>
-                <p class="second-text-desc last-para">Et nous sommes en train d’y arriver. Plus de 1.000.000 personnes dans plus de 190 pays créent déjà les contenus visuels du futur avec Genially.</p>
+                <p class="second-text-desc">Notre équipe d’experts en CV passionnés ont conçu Curricase pour inclure un créateur de CV facile d’emploi permettant à nos utilisateurs de concevoir un CV gagnant, sur base de modèles de CV spécifiques</p>
+                <p class="second-text-desc last-para">Notre priorité c’est d’aider nos utilisateurs à perfectionner la tâche délicate d’écrire le parfait CV personnalisé afin de décrocher le poste de leur rêve !</p>
             </div>
         </div>
     </div>
@@ -42,36 +42,36 @@ get_header(); ?>
             <div class="img-about">
                 <img src="<?php echo get_template_directory_uri() ?>/assets/img/recruteur.jpg" alt="about us">
             </div>
-            <h2>Cyril Bationo</h2>
-            <p>Lorem ipsum</p>
+            <h2>Cyril B</h2>
+            <p><a href="#">Linkedln</a></p>
         </div>
         <div class="card">
             <div class="img-about">
                 <img src="<?php echo get_template_directory_uri() ?>/assets/img/recruteur.jpg" alt="about us">
             </div>
-            <h2>Cyril Bationo</h2>
-            <p>Lorem ipsum</p>
+            <h2>Clement B</h2>
+            <p><a href="#">Linkedln</a></p>
         </div>
         <div class="card">
             <div class="img-about">
                 <img src="<?php echo get_template_directory_uri() ?>/assets/img/recruteur.jpg" alt="about us">
             </div>
-            <h2>Cyril Bationo</h2>
-            <p>Lorem ipsum</p>
+            <h2>Jules G</h2>
+            <p><a href="#">Linkedln</a></p>
         </div>
         <div class="card">
             <div class="img-about">
                 <img src="<?php echo get_template_directory_uri() ?>/assets/img/recruteur.jpg" alt="about us">
             </div>
-            <h2>Cyril Bationo</h2>
-            <p>Lorem ipsum</p>
+            <h2>Antoine K</h2>
+            <p><a href="#">Linkedln</a></p>
         </div>
         <div class="card">
             <div class="img-about">
                 <img src="<?php echo get_template_directory_uri() ?>/assets/img/recruteur.jpg" alt="about us">
             </div>
-            <h2>Cyril Bationo</h2>
-            <p>Lorem ipsum</p>
+            <h2>Oummoul K</h2>
+            <p><a href="#">Linkedln</a></p>
         </div>
     </div>
 

@@ -123,8 +123,3 @@ $('#addc').on('click', function(e) {
     $('#add-competence').append(html);
 });
 
-
-
-
-
-
