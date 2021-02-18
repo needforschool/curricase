@@ -1071,7 +1071,7 @@ a:hover {
 
 #second .second-wrapper {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	padding: 50px;
 }
@@ -1151,14 +1151,14 @@ a:hover {
 	}
 	#second {
 		width: 100%;
-		padding: 0 50px 0 0;
 	}
 	#second .second-wrapper .second-img img.tempo-img {
 		border-radius: 10px;
 		width: 140%;
 	}
 	#second .second-wrapper .second-img {
-		margin-left: -4%;
+		display: flex;
+		justify-content: center;
 	}
 	#second .second-wrapper .second-text {
 		width: 100%;
@@ -1166,9 +1166,9 @@ a:hover {
 	}
 	#second .second-wrapper {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: flex-start;
-		padding: 50px 0 50px 50px;
+		padding: 50px 0;
 		width: 100%;
 	}
 	#second .second-wrapper .second-text {
@@ -1193,6 +1193,7 @@ a:hover {
 	#third .third-wrapper h1.third-title {
 		font-size: 2rem;
 	}
+	
 }
 
 @media only screen and (max-width: 750px) {
@@ -1225,6 +1226,7 @@ a:hover {
 	#second .second-wrapper {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		width: 100%;
 	}
 	#second .second-wrapper .second-text {
@@ -1242,6 +1244,7 @@ a:hover {
 		width: 100%;
 		max-width: 100%;
 	}
+	
 }
 
 /******************************* Dashboard recruteur ***************************************************/
@@ -1610,6 +1613,9 @@ a:hover {
 	color: var(--orangePrimary);
 	font-size: 1.1rem;
 	margin: 5px 0;
+ }
+ #team .card p a {
+	 color: var(--orangePrimary);
  }
  #team .card h2 {
 	margin-top: 15px;
