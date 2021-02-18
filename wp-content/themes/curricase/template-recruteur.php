@@ -5,9 +5,18 @@ Template Name: Recruteur
 
 get_header();
 
+
 $id = $_GET['id'];
 
 $info = $wpdb->get_row("SELECT * FROM {$wpdb->prefix}cv WHERE id=$id ");
+
+$socials = $wpdb->get_row("SELECT * FROM {$wpdb->prefix}cv_socials WHERE id=$id ");
+
+$skills = $wpdb->get_row("SELECT * FROM {$wpdb->prefix}cv_skills WHERE id=$id ");
+
+$formation = $wpdb->get_row("SELECT * FROM {$wpdb->prefix}cv_formation WHERE id=$id ");
+
+$experience = $wpdb->get_row("SELECT * FROM {$wpdb->prefix}cv_experience WHERE id=$id ");
 
 debug($info);
 
@@ -24,10 +33,10 @@ debug($info);
                     <div class="resume_content">
                         <div class="resume_item resume_info">
                             <div class="title">
-                                <p class="bold">stephen colbert</p>
-                                <p class="regular">Designer</p>
-                                <p id="naissance" class="regular">29/08/2006</p>
-                                <p id="localité" class="regular">Lille</p>
+                                <p class="bold"><?php echo $info->firstname . ' ' . $info->lastname; ?></p>
+                                <p class="regular"><?php echo $info->profil_jobname; ?></p>
+                                <p id="naissance" class="regular"><?php echo $info->date_birth; ?></p>
+                                <p id="localité" class="regular"><?php echo $info->place_birth; ?></p>
                             </div>
                             <ul>
                                 <li>
@@ -35,7 +44,7 @@ debug($info);
 
                                     </div>
                                     <div class="data">
-                                        21 Street, Texas <br /> USA
+                                        <?php echo $info->adresse . ' ' . $info->code_postal; ?> <br /> <?php echo $info->ville; ?>
                                     </div>
                                 </li>
                                 <li>
@@ -43,7 +52,7 @@ debug($info);
 
                                     </div>
                                     <div class="data">
-                                        +324 4445678
+                                        <?php echo $info->phone_number; ?>
                                     </div>
                                 </li>
                                 <li>
@@ -51,7 +60,7 @@ debug($info);
 
                                     </div>
                                     <div class="data">
-                                        stephen@gmail.com
+                                        <?php echo $info->email; ?>
                                     </div>
                                 </li>
                                 <li>
@@ -59,7 +68,7 @@ debug($info);
 
                                     </div>
                                     <div class="data">
-                                        www.stephen.com
+                                        <?php echo $socials->website; ?>
                                     </div>
                                 </li>
                             </ul>
@@ -71,31 +80,31 @@ debug($info);
                             <ul>
                                 <li>
                                     <div class="skill_name">
-                                        HTML
+                                        <?php echo $skills->title . ' ' . $skills->level; ?>
                                     </div>
 
                                 </li>
                                 <li>
                                     <div class="skill_name">
-                                        CSS
+
                                     </div>
 
                                 </li>
                                 <li>
                                     <div class="skill_name">
-                                        SASS
+
                                     </div>
 
                                 </li>
                                 <li>
                                     <div class="skill_name">
-                                        JS
+
                                     </div>
 
                                 </li>
                                 <li>
                                     <div class="skill_name">
-                                        JQUERY
+
                                     </div>
 
                                 </li>
@@ -113,7 +122,7 @@ debug($info);
                                     </div>
                                     <div class="data">
                                         <p class="semi-bold">Linkedin</p>
-                                        <p>Stephen@linkedin</p>
+                                        <p><?php echo $socials->linkedin; ?></p>
                                     </div>
                                 </li>
                             </ul>
@@ -124,7 +133,7 @@ debug($info);
                     <div class="resume_item resume_about">
                         <div class="title">
 
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis illo fugit officiis distinctio culpa officia totam atque exercitationem inventore repudiandae?</p>
+                            <p><?php echo $info->profil_desc; ?></p>
                         </div>
                         <div class="resume_item resume_work">
                             <div class="title">
@@ -132,28 +141,12 @@ debug($info);
                             </div>
                             <ul>
                                 <li>
-                                    <div class="date">2013 - 2015</div>
+                                    <div class="date"><?php echo $experience->date_from . ' - ' . $experience->date_to; ?></div>
                                     <div class="info">
-                                        <p class="semi-bold">Lorem ipsum dolor sit amet.</p>
-                                        <p id="nomemployeur" class="semi-bold">Renault</p>
-                                        <p id="localité">Lille</p>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="date">2015 - 2017</div>
-                                    <div class="info">
-                                        <p class="semi-bold">Lorem ipsum dolor sit amet.</p>
-                                        <p id="nomemployeur" class="semi-bold">Renault</p>
-                                        <p id="localité">Lille</p>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="date">2017 - Present</div>
-                                    <div class="info">
-                                        <p class="semi-bold">Lorem ipsum dolor sit amet.</p>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+                                        <p class="semi-bold"><?php echo $experience->fonction;; ?></p>
+                                        <p id="nomemployeur" class="semi-bold"><?php echo $experience->employeur; ?></p>
+                                        <p id="localité"><?php echo $experience->localité; ?></p>
+                                        <p><?php echo $experience->description; ?></p>
                                     </div>
                                 </li>
                             </ul>
@@ -164,21 +157,12 @@ debug($info);
                             </div>
                             <ul>
                                 <li>
-                                    <div class="date">2010 - 2013</div>
+                                    <div class="date"><?php $formation->date_from . ' - ' . $formation->date_to; ?></div>
                                     <div class="info">
-                                        <p class="semi-bold">Web Designing </p>
-                                        <p id="nomemployeur" class="semi-bold">Renault</p>
-                                        <p id="localité">Lille</p>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="date">2000 - 2010</div>
-                                    <div class="info">
-                                        <p class="semi-bold">Texas International School</p>
-                                        <p id="nomemployeur" class="semi-bold">Renault</p>
-                                        <p id="localité">Lille</p>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, voluptatibus!</p>
+                                        <p class="semi-bold"><?php $formation->name; ?></p>
+                                        <p id="nomemployeur" class="semi-bold"><?php echo $formation->etablissement; ?></p>
+                                        <p id="localité"><?php echo $formation->localite; ?></p>
+                                        <p><?php echo $formation->description; ?></p>
                                     </div>
                                 </li>
                             </ul>
