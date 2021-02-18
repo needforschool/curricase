@@ -3,6 +3,9 @@
 Template Name: Dashboard Recruteur
 */
 
+$userID = get_current_user_id();
+$last_name = get_user_meta( $userID, 'last_name', true );
+$first_name = get_user_meta( $userID, 'first_name', true );
 
 $cvs = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}cv");
 
@@ -25,7 +28,7 @@ $cvs = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}cv");
         <div class="cont-input">
             <i class="fas fa-search"></i>
             <input type="search" placeholder="chercher des créations" class="search" id="recherche">
-            <p class="welcome">Bienvenue Nom prenom</p>
+            <p class="welcome">Bienvenue <?php echo $first_name . ' ' . $last_name; ?></p>
             <img src="<?php echo get_template_directory_uri() ?>/assets/img/recruteur.jpg" alt="" class="recruteur">
         </div>
     </div>

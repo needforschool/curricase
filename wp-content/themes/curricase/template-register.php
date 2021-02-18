@@ -49,7 +49,12 @@ if (!empty($_POST['submit'])) {
         if (is_wp_error($user)) {
             echo $user->get_error_message();
         } else {
-            wp_redirect( home_url() );
+            if (current_user_can('recruiter')) {
+                wp_redirect(home_url('dashboardrecruteur'));
+            } else if (current_user_can('candidate')) {
+                wp_redirect(home_url('dashboard-candidate'));
+            }
+
         }
     }
 }

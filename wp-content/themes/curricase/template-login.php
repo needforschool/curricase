@@ -28,7 +28,14 @@ if (!empty($_POST['submit'])) {
         if (is_wp_error($user)) {
             echo $user->get_error_message();
         } else {
-            wp_redirect( home_url() );
+
+            
+            if (current_user_can('recruiter')) {
+                wp_redirect(home_url('dashboardrecruteur'));
+            } else if (current_user_can('candidate')) {
+                wp_redirect(home_url('dashboard-candidate'));
+            }
+
         }
     }
 }
@@ -43,7 +50,7 @@ get_header();
                 <form action="" class="form-register" method="post">
                     <input type="text" placeholder="Nom d'utilisateur" name="username">
                     <input type="password" placeholder="Mot de passe" name="password">
-                    <button class="btn btn-orangePrimary" type="submit" name="submit" value="1">M'inscrire</button>
+                    <button class="btn btn-orangePrimary" type="submit" name="submit" value="1">Me connecter</button>
                 </form>
             </div>
             <div class="register-content registred">
