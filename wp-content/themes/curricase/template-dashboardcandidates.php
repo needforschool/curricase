@@ -28,16 +28,21 @@ $cvs = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}cv WHERE user_id=$userID
         <div class="cont-input">
             <i class="fas fa-search"></i>
             <input type="search" placeholder="chercher des créations" class="search" id="recherche">
+
             <p class="welcome">Bienvenue <?php echo $first_name . ' ' . $last_name; ?></p>
+
             <img src="<?php echo get_template_directory_uri() ?>/assets/img/recruteur.jpg" alt="" class="recruteur">
         </div>
     </div>
     <div class="flex-recruter candidates">
         <div class="banner">
             <a href="<?php echo get_site_url('home') ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/img/logo/logo-square-bg-none.png" alt="logo image" class="logo-candidates"></a>
+
             <div class="creations">
                 <h1>Mes Créations</h1>
+
                 <a href="<?php echo esc_url(home_url('new-cv-1')) ?>" class="btn btn-new">New +</a>
+
             </div>
         </div>
         <div class="container-img">

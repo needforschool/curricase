@@ -28,15 +28,18 @@ $cvs = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}cv");
         <div class="cont-input">
             <i class="fas fa-search"></i>
             <input type="search" placeholder="chercher des créations" class="search" id="recherche">
+
             <p class="welcome">Bienvenue <?php echo $first_name . ' ' . $last_name; ?></p>
+
             <img src="<?php echo get_template_directory_uri() ?>/assets/img/recruteur.jpg" alt="" class="recruteur">
         </div>
     </div>
     <div class="flex-recruter">
         <div class="banner">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/img/logo/logo-square-bg-none.png" alt="logo image">
+        <a href="<?php echo esc_url(home_url()); ?>" title="Aller à la page d'acceuil"><img src="<?php echo get_template_directory_uri() ?>/assets/img/logo/logo-square-bg-none.png" alt="logo image"></a>
         </div>
         <div class="container-img">
+
             <?php foreach ($cvs as $cv) {
                 ?>
                 <a href="<?php echo esc_url(home_url('view_cv_recruteur')) ?>/?id=<?php echo $cv->id; ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/img/modele1.jpg" alt="modèle cv" class="modele"></a>
@@ -44,7 +47,6 @@ $cvs = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}cv");
 
                 <?php
             } ?>
-            
         </div>
     </div>
 

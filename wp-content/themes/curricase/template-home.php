@@ -9,7 +9,9 @@ get_header(); ?>
                 <p class="first-text-desc">Créez rapidement des CV vu par un grand nombre de recruteurs</p>
                 <h1 class="first-text-title">Bienvenue à la nouvelle génération de Cv</h1>
 
+
                 <a href="<?php echo esc_url(home_url('register')); ?>" class="btn btn-one">Créer un compte gratuit</a>
+
             </div>
             <div class="first-image">
                 <img class="first-img" src="<?php echo get_template_directory_uri() ?>/assets/img/img_cv1.png" alt="first image">
