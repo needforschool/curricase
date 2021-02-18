@@ -81,30 +81,7 @@ $experience = $wpdb->get_row("SELECT * FROM {$wpdb->prefix}cv_experience WHERE i
                                     </div>
 
                                 </li>
-                                <li>
-                                    <div class="skill_name">
-
-                                    </div>
-
-                                </li>
-                                <li>
-                                    <div class="skill_name">
-
-                                    </div>
-
-                                </li>
-                                <li>
-                                    <div class="skill_name">
-
-                                    </div>
-
-                                </li>
-                                <li>
-                                    <div class="skill_name">
-
-                                    </div>
-
-                                </li>
+                               
                             </ul>
                         </div>
                         <div class="resume_item resume_social">
