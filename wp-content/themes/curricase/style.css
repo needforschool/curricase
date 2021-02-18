@@ -198,6 +198,8 @@ header {
 }
 .error {
 	color: red;
+	text-align: center;
+    font-size: 10px;
 }
 /* responsive cv crea */
 
