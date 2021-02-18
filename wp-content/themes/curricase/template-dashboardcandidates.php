@@ -34,7 +34,7 @@ $cvs = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}cv WHERE user_id=$userID
     </div>
     <div class="flex-recruter candidates">
         <div class="banner">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/img/logo/logo-square-bg-none.png" alt="logo image" class="logo-candidates">
+            <a href="<?php echo get_site_url('home') ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/img/logo/logo-square-bg-none.png" alt="logo image" class="logo-candidates"></a>
             <div class="creations">
                 <h1>Mes Créations</h1>
                 <a href="<?php echo esc_url(home_url('new-cv-1')) ?>" class="btn btn-new">New +</a>
