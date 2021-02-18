@@ -2,8 +2,8 @@
 /*
 Template Name: creatCV1
 */
-get_header('createCV');
 
+session_start();
 // Traitement PHP
 $errors = array();
 $success = false;
@@ -59,16 +59,19 @@ if (!empty($_POST['submitted'])) {
                     $_SESSION['create_cv'][] = $value;
                     break;
             }
+           
+            
         }
+       
+        // wp_redirect(site_url() . "/creatCV2");
+        //     exit;
+        
 
-        wp_redirect( home_url('creatCV2') ); exit;
-     }
-
-
-
-     
+        wp_redirect(site_url('creatCV2'));
+        exit;
+    }
 }
-
+get_header('createCV');
 ?>
 
 <div class="form">
@@ -196,7 +199,7 @@ if (!empty($_POST['submitted'])) {
         </div>
 
         <div class="submit">
-            <input id="btn-submit" type="submit" name="submitted" value="Etape suivante">
+            <input id="btn-submit" type="submit" name="submitted"  value="Etape suivante">
         </div>
     </form>
 </div>

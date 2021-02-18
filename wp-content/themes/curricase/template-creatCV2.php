@@ -2,7 +2,8 @@
 /*
 Template Name: creatCV2
 */
-get_header('createCV');
+session_start();
+
 // Traitement PHP
 $errors = array();
 $success = false;
@@ -17,7 +18,6 @@ if (!empty($_POST['submitted'])) {
     $jusqua     = cleanXss($_POST['jusqua']);
     $description2     = cleanXss($_POST['description2']);
     $formation     = cleanXss($_POST['formation']);
-    $linkedin     = cleanXss($_POST['linkedin']);
     $localité   = cleanXss($_POST['localité']);
     $etablissement   = cleanXss($_POST['etablissement']);
     $datedebut   = cleanXss($_POST['datedebut']);
@@ -110,6 +110,9 @@ if (!empty($_POST['submitted'])) {
     );
     $success = true;
 }
+debug($_SESSION);
+debug($_SESSION['create_cv']);
+get_header('createCV');
 ?>
 
 
@@ -140,10 +143,7 @@ if (!empty($_POST['submitted'])) {
                         <p class="error"><?php if (!empty($errors['titre'])) {
                                                 echo $errors['titre'];
                                             } ?></p>
-                        <textarea class="input3" name="description" id="description" placeholder="Description"></textarea>
-
-                        <label for="titre"></label>
-                        <input class="input3" type="text" name="titre" id="titre" placeholder="Titre">
+                     
                     </div>
                 </div>
             </div>
@@ -340,13 +340,13 @@ if (!empty($_POST['submitted'])) {
                 </div>
             </div>
             <div class="submit">
-                <input id="btn-submit" type="submit" value="Etape suivante">
+                <input id="btn-submit" type="submit"  name="submitted" value="Etape suivante">
             </div>
     </form>
 </div>
 
 
-<?php print_r($_POST);
+<?php 
 
 
 
