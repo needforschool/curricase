@@ -21,6 +21,11 @@ $cvs = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}cv");
 </head>
 
 <body>
+<div class="banner">
+    <div class="inside-banner"> <a href="<?php echo esc_url(home_url()); ?>" title="Aller à la page d'acceuil"><img src="<?php echo get_template_directory_uri() ?>/assets/img/logo/logo-square-bg-none.png" alt="logo image"></a> </div>
+        
+        </div>
+
     <div class="container-dash">
         <div class="cont-input">
             <i class="fas fa-search"></i>
@@ -30,9 +35,7 @@ $cvs = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}cv");
         </div>
     </div>
     <div class="flex-recruter">
-        <div class="banner">
-        <a href="<?php echo esc_url(home_url()); ?>" title="Aller à la page d'acceuil"><img src="<?php echo get_template_directory_uri() ?>/assets/img/logo/logo-square-bg-none.png" alt="logo image"></a>
-        </div>
+        
         <div class="container-img">
 
             <?php foreach ($cvs as $cv) {

@@ -18,6 +18,16 @@ Template Name: Candidates
 </head>
 
 <body>
+    <div class="banner">
+        <div class="inside-banner">
+            <a href="<?php echo esc_url(home_url()); ?>" title="Aller à la page d'acceuil"><img src="<?php echo get_template_directory_uri() ?>/assets/img/logo/logo-square-bg-none.png" alt="logo image" class="logo-candidates"></a>
+            <div class="creations">
+                <h1>Mes Créations</h1>
+                <a href="<?php echo esc_url(home_url('creatcv1')); ?>" class="btn btn-new">New +</a>
+            </div>
+        </div>
+
+    </div>
     <div class="container-dash">
         <div class="cont-input">
             <i class="fas fa-search"></i>
@@ -27,13 +37,7 @@ Template Name: Candidates
         </div>
     </div>
     <div class="flex-recruter candidates">
-        <div class="banner">
-            <a href="<?php echo esc_url(home_url()); ?>" title="Aller à la page d'acceuil"><img src="<?php echo get_template_directory_uri() ?>/assets/img/logo/logo-square-bg-none.png" alt="logo image" class="logo-candidates"></a>
-            <div class="creations">
-                <h1>Mes Créations</h1>
-                <a href="<?php echo esc_url(home_url('creatcv1')); ?>" class="btn btn-new">New +</a>
-            </div>
-        </div>
+
         <div class="container-img">
             <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/modele1.jpg" alt="modèle cv" class="modele"></a>
             <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/modele2.jpg" alt="modèle cv" class="modele modele2"></a>
