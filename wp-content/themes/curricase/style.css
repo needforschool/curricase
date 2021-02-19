@@ -1071,7 +1071,7 @@ a:hover {
 
 #second .second-wrapper {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	padding: 50px;
 }
@@ -1158,7 +1158,8 @@ a:hover {
 	}
 	#second .second-wrapper .second-img {
 		display: flex;
-		justify-content: center;
+		justify-content: space-around;
+		margin-left: 70px;
 	}
 	#second .second-wrapper .second-text {
 		width: 100%;
@@ -1222,6 +1223,9 @@ a:hover {
 	}
 	#second .second-wrapper .second-img img.tempo-img {
 		width: 90%;
+	}
+	#second .second-wrapper .second-img {
+		margin-left: 0;
 	}
 	#second .second-wrapper {
 		display: flex;
@@ -1301,19 +1305,25 @@ a:hover {
 	display: flex;
 }
 
-.flex-recruter .banner {
+.banner {
+	position: fixed;
+    height: 100%;
+    width: 100%;
+    /* z-index: -10; */
+}
+.banner .inside-banner {
 	background-color: #d1d8e0;
 	width: 20%;
-	height: 760px;
+	height: 100%;
 	margin-right: 10%;
-	margin-top: -90px;
+	/* margin-top: -90px; */
 	position: relative;
 	z-index: 99;
 }
 
-.flex-recruter .banner img {
+.banner img {
 	width: 100%;
-	max-width: 90px;
+	max-width: 100px;
 	position: absolute;
 	top: 20px;
 	left: 50px;
@@ -1324,10 +1334,11 @@ a:hover {
 
 .flex-recruter .container-img {
 	margin-top: 60px;
+	margin-left: 30%;
 }
 
 .flex-recruter .container-img a img.modele2 {
-	margin-left: 150px;
+	margin-left: 30px;
 }
 
 .flex-recruter .container-img a, .flex-recruter .container-img a img, .flex-recruter .banner img {
@@ -1383,13 +1394,9 @@ a:hover {
 		margin: 15px;
 		font-size: 1.3rem;
 	}
-	.flex-recruter {
-		display: flex;
-	}
-	.flex-recruter .banner {
-		width: 30%;
-		height: 1024px;
-		margin-top: -195px;
+	.banner .inside-banner img{
+		left: 30px;
+		
 	}
 	.flex-recruter .container-img {
 		margin-top: 60px;
@@ -1410,11 +1417,7 @@ a:hover {
 }
 
 @media all and (min-width: 1024px) and (max-width: 1336px) {
-	.flex-recruter .banner {
-		width: 30%;
-		height: 1365px;
-		margin-top: -195px;
-	}
+	
 	.container-dash .cont-input .fas {
 		position: absolute;
 		right: 17%;
@@ -1450,29 +1453,20 @@ a:hover {
 		margin: 15px;
 		font-size: 1.3rem;
 	}
-	.flex-recruter {
-		display: flex;
-	}
-	.flex-recruter .banner {
-		width: 50px;
-		height: 50px;
-		background-color: #fff;
-		margin-right: -12%;
-		margin-top: -195px;
+	.banner {
+		
+		/* background-color: #fff; */
+		/* margin-right: -12%; */
 		position: relative;
-		z-index: -99;
-		/* margin-top: -195px; */
+		z-index: -99; 
 	}
-	.flex-recruter .banner img {
+	.banner .inside-banner img {
 		position: absolute;
 		top: 0;
 		left: 10px;
 	}
 	.flex-recruter .container-img {
-		margin-top: 20px;
-	}
-	.flex-recruter .container-img a img.modele {
-		margin-left: 50%;
+		margin: 200px;
 	}
 	.flex-recruter .container-img a img.modele2 {
 		margin-top: 30px;
@@ -1486,17 +1480,17 @@ a:hover {
 }
 
 /****************************** dashboard candidat *******************************************/
-
-.flex-recruter .banner img.logo-candidates {
-	left: 100px;
+.banner .inside-banner {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.banner .inside-banner img.logo-candidates {
+	margin-left: 30px;
 }
 
-.flex-recruter .banner .creations {
-	margin-top: 55%;
-	margin-left: 30%;
-}
-
-.flex-recruter .banner .creations .btn-new {
+.banner .inside-banner .creations .btn-new {
 	margin-top: 20px;
 	width: 120px;
 	background-color: #c4c4c4;
@@ -1508,13 +1502,13 @@ a:hover {
 /****************************** responsive dashboard candidat *******************************************/
 
 @media only screen and (max-width: 1098px) {
-	.flex-recruter .banner img.logo-candidates {
-		left: 80px;
+	.banner .inside-banner img.logo-candidates {
+		left: 0;
 	}
 }
 
 @media only screen and (max-width: 750px) {
-	.flex-recruter .banner .creations h1 {
+	.banner .inside-banner .creations h1 {
 		width: 0;
 		height: 0;
 		display: none;
@@ -1523,15 +1517,19 @@ a:hover {
 		position: relative;
 		margin-bottom: 50px;
 	}
-	.flex-recruter .banner .creations a.btn-new {
+	.banner .inside-banner .creations a.btn-new {
 		display: block;
 		position: absolute;
 		top: 790px;
 		left: 130px;
 	}
-	.flex-recruter .banner img.logo-candidates {
-		left: 5px;
-		top: 5px;
+	.banner .inside-banner img.logo-candidates {
+		left: -5px;
+		top: 0px;
+	}
+	.flex-recruter .container-img {
+		margin-top: 20px;
+		margin-left: 20px;
 	}
 }
 
