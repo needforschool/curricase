@@ -24,10 +24,10 @@ $cvs = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}cv");
 </head>
 
 <body>
-<div class="banner">
-    <div class="inside-banner"> <a href="<?php echo esc_url(home_url()); ?>" title="Aller à la page d'acceuil"><img src="<?php echo get_template_directory_uri() ?>/assets/img/logo/logo-square-bg-none.png" alt="logo image"></a> </div>
-        
-        </div>
+    <div class="banner">
+        <div class="inside-banner"> <a href="<?php echo esc_url(home_url()); ?>" title="Aller à la page d'acceuil"><img src="<?php echo get_template_directory_uri() ?>/assets/img/logo/logo-square-bg-none.png" alt="logo image"></a> </div>
+
+    </div>
 
     <div class="container-dash">
         <div class="cont-input">
@@ -41,16 +41,17 @@ $cvs = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}cv");
     </div>
     <div class="flex-recruter">
         <div class="container-img">
-            <div class="box-container-img">
-                <?php foreach ($cvs as $cv) {
-                ?>
+
+            <?php foreach ($cvs as $cv) {
+            ?>
+                <div class="box-container-img">
                     <a href="<?php echo esc_url(home_url('view_cv_recruteur')) ?>/?id=<?php echo $cv->id; ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/img/modele1.jpg" alt="modèle cv" class="modele"></a>
                     <p class="jbname"> <?php echo $cv->profil_jobname; ?> </p>
+                </div>
+            <?php
+            } ?>
 
-                <?php
-                } ?>
 
-            </div>
 
 
         </div>

@@ -18,7 +18,6 @@ $formation = $wpdb->get_row("SELECT * FROM {$wpdb->prefix}cv_formation WHERE id=
 
 $experience = $wpdb->get_row("SELECT * FROM {$wpdb->prefix}cv_experience WHERE id=$id ");
 
-debug($info);
 
 ?>
 <div class="content">

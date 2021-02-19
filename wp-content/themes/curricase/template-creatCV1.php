@@ -67,7 +67,7 @@ if (!empty($_POST['submitted'])) {
         //     exit;
         
 
-        wp_redirect(site_url('creatCV2'));
+        wp_redirect(site_url('creatcv2'));
         exit;
     }
 }

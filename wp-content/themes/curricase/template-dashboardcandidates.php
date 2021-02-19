@@ -29,7 +29,7 @@ $cvs = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}cv WHERE user_id=$userID
             <a href="<?php echo esc_url(home_url()); ?>" title="Aller à la page d'acceuil"><img src="<?php echo get_template_directory_uri() ?>/assets/img/logo/logo-square-bg-none.png" alt="logo image" class="logo-candidates"></a>
             <div class="creations">
                 <h1>Mes Créations</h1>
-                <a href="<?php echo esc_url(home_url('creatcv1')); ?>" class="btn btn-new">New +</a>
+                <a href="<?php echo esc_url(home_url('new-cv-1')); ?>" class="btn btn-new">New +</a>
             </div>
         </div>
 
@@ -46,15 +46,16 @@ $cvs = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}cv WHERE user_id=$userID
     </div>
     <div class="flex-recruter candidates">
         <div class="container-img">
-            <div class="box-container-img">
-                <?php foreach ($cvs as $cv) {
-                ?>
+
+            <?php foreach ($cvs as $cv) {
+            ?>
+                <div class="box-container-img">
                     <a href="<?php echo esc_url(home_url('view-cv-candidat')) ?>/?id=<?php echo $cv->id; ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/img/modele1.jpg" alt="modèle cv" class="modele"></a>
                     <p class="jbname"> <?php echo $cv->profil_jobname; ?> </p>
+                </div>
+            <?php
+            } ?>
 
-                <?php
-                } ?>
-            </div>
 
 
 

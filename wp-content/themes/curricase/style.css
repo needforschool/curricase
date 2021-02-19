@@ -1365,6 +1365,21 @@ a:hover {
 	transition: all .2s ease-in-out;
 }
 
+.container-img{
+	width: 80%;
+	flex-wrap: wrap;
+}
+
+.box-container-img{
+	margin-right: 15%;
+	margin-top: 20px;
+}
+.jbname{
+	margin-top: 2%;
+	text-align: center;
+	font-size: 1.3em;
+}
+
 
 /********************************RESPONSIVE DASHBOARD RECRUTEUR **********************************/
 

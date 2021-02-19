@@ -5,7 +5,6 @@ Template Name: creatCV2
 session_start();
 
 $userID = get_current_user_id();
-echo $userID;
 
 // Recup info Session
 
