@@ -31,7 +31,7 @@
 
         <header id="masthead" class="site-header">
 
-            <div class="logo"></div>
+            <div class="logo"><a href="<?php echo get_site_url('home') ?>"></a></div>
 
             <img class="profileImg" src="https://meetanentrepreneur.lu/wp-content/uploads/2019/08/profil-linkedin.jpg" alt="photo de profile">
 

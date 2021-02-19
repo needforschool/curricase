@@ -79,15 +79,7 @@ get_header('createCV');
         <div class="section">
             <h2 class="title">Mes données</h2>
             <div class="content-form">
-                <div class="content-formbox1">
-                    <div class="boxphoto">
-                        <div class="boxphoto2">
-                            <label for="profil"><i class="fas fa-camera-retro"></i></label>
-                            <input type="file" name="profil" id="profil" accept="image/png, image/jpeg">
-                        </div>
-                    </div>
-
-                </div>
+               
                 <div class="content-formbox2">
 
                     <div class="minibox">

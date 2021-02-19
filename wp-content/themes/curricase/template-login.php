@@ -30,7 +30,13 @@ if (!empty($_POST['submit'])) {
         } elseif ($roles == 'candidate') {
             wp_redirect(home_url('candidates'));
         } else {
-            wp_redirect(home_url('dashboard-recruteur'));
+
+            if (current_user_can('recruiter')) {
+                wp_redirect(home_url('dashboardrecruteur'));
+            } else if (current_user_can('candidate')) {
+                wp_redirect(home_url('dashboard-candidate'));
+            }
+
         }
     }
 }
@@ -45,7 +51,9 @@ get_header();
                 <form action="" class="form-register" method="post">
                     <input type="text" placeholder="Nom d'utilisateur" name="username">
                     <input type="password" placeholder="Mot de passe" name="password">
+
                     <button class="btn btn-orangePrimary" type="submit" name="submit" value="1">Me Connecter</button>
+
                 </form>
             </div>
             <div class="register-content registred">

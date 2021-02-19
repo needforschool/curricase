@@ -3,6 +3,9 @@
 Template Name: Dashboard Recruteur
 */
 
+$userID = get_current_user_id();
+$last_name = get_user_meta($userID, 'last_name', true);
+$first_name = get_user_meta($userID, 'first_name', true);
 
 $cvs = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}cv");
 
@@ -30,21 +33,26 @@ $cvs = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}cv");
         <div class="cont-input">
             <i class="fas fa-search"></i>
             <input type="search" placeholder="chercher des créations" class="search" id="recherche">
-            <p class="welcome">Bienvenue <?php echo (is_user_logged_in()) ? wp_get_current_user()->user_login : 'Inconnu'; ?></p>
+
+            <p class="welcome">Bienvenue <?php echo $first_name . ' ' . $last_name; ?></p>
+
             <img src="<?php echo get_template_directory_uri() ?>/assets/img/recruteur.jpg" alt="" class="recruteur">
         </div>
     </div>
     <div class="flex-recruter">
-        
         <div class="container-img">
-
-            <?php foreach ($cvs as $cv) {
+            <div class="box-container-img">
+                <?php foreach ($cvs as $cv) {
                 ?>
-                <a href="<?php echo esc_url(home_url('view_cv_recruteur')) ?>/?id=<?php echo $cv->id; ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/img/modele<?php echo $cv->theme_id ; ?>.jpg" alt="modèle cv" class="modele"></a>
-                <p class="jbname"> <?php echo $cv->profil_jobname; ?> </p>
+                    <a href="<?php echo esc_url(home_url('view_cv_recruteur')) ?>/?id=<?php echo $cv->id; ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/img/modele1.jpg" alt="modèle cv" class="modele"></a>
+                    <p class="jbname"> <?php echo $cv->profil_jobname; ?> </p>
 
                 <?php
-            } ?>
+                } ?>
+
+            </div>
+
+
         </div>
     </div>
 
