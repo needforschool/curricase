@@ -10,6 +10,8 @@
  * @package curricase
  */
 
+if (!empty($_GET['logout']) && $_GET['logout']) wp_logout();
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -30,11 +32,10 @@
 	<header id="header">
 		<nav class="navbar">
 			<div class="container">
-				<a href="<?php echo get_site_url('home') ?>" class="nav-brand"><img src="<?= get_template_directory_uri() ?>/assets/img/logo/logo-square-bg-none.png" alt="Curicase Logo" class="nav-logo"><span>Curri</span>case</a>
+				<a href="<?php echo get_site_url('home') ?>" class="nav-brand"><img src="<?= get_template_directory_uri() ?>/assets/img/logo/logo-square-bg-none.png" alt="Curricase Logo" class="nav-logo"><span>Curri</span>case</a>
 				<ul class="nav">
-					<li class="nav-item"><a href="<?php echo esc_url(home_url('register')); ?>" class="nav-link btn btn-orangePrimary">Commencer à créer</a></li>
-
-					<li class="nav-item"><a href="<?php echo esc_url(home_url('login')); ?>" class="nav-link"><?php echo (is_user_logged_in()) ? wp_get_current_user()->user_login : 'Se connecter'; ?></a></li>
+					<li class="nav-item"><a href="" class="nav-link btn btn-orangePrimary">Commencer à créer</a></li>
+					<li class="nav-item"><a href="<?php echo (is_user_logged_in()) ? '?logout=true' : esc_url(home_url('login')); ?>" class="nav-link"><?php echo (is_user_logged_in()) ? wp_get_current_user()->user_login : 'Se connecter'; ?></a></li>
 				</ul>
 			</div>
 		</nav>
