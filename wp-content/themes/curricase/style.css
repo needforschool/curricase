@@ -1084,7 +1084,7 @@ a:hover {
 #second .second-wrapper .second-text {
 	width: 100%;
 	max-width: 30%;
-	/* margin-right: 15%; */
+	margin-left: 25%; 
 	color: var(--white);
 }
 
